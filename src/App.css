@@ -1,0 +1,30 @@
+#wrapper {
+    display: flex;
+}
+
+
+.result {
+    position: absolute;
+}
+
+.grid {
+    position: absolute;
+    top: 280px;
+}
+
+.description {
+    position: absolute;
+    left: 450px;
+    top: 100px;
+    border-style: solid;
+    height: 140px;
+    width: 500px;
+}
+
+h4 {
+    margin-left: 10px;
+}
+
+p {
+    margin-left: 10px;
+}

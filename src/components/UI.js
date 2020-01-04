@@ -4,9 +4,9 @@ import './UI.css'
 const UI = ({choiceHandler}) => {
 
     const arrays = [
-        {id: 1, name: 'Esimene', value: "2,5,13,29,7,1,18,40,49,4"},
-        {id: 2, name: 'Teine', value: "1,10,44,2,12,3,13,20"},
-        {id: 3, name: 'Kolmas', value: "45,6,16,9,33,28,11,37,49,25"},
+        {id: 1, name: 'Esimene', value: "A,2;B,3;A,-;C,4;D,5;B,-;E,15"},
+        {id: 2, name: 'Teine', value: "A,4;B,3;C,6;D,5;B,-;E,5;A,-;F,10"},
+        {id: 3, name: 'Kolmas', value: "A,2;B,3;C,4;D,5;B,-;E,7;D,-;F,10;A,-;G,40"},
     ];
 
     const [choice, setChoice] = useState('1');
@@ -30,8 +30,8 @@ const UI = ({choiceHandler}) => {
     };
 
     return (
-        <div>
-            <h3> Vali või sisesta järjend </h3>
+        <div className='ui'>
+            <h3> Vali või sisesta järjend (kujul A,2;B,3;A,-;C,4). Max 10 sündmust. </h3>
             {arrays.map(array =>
                 <div key={array.id} className="row">
                     <label>
@@ -48,7 +48,7 @@ const UI = ({choiceHandler}) => {
                            onChange={() => handleChoice(arrays.length + 1)}/>
                     Enda oma:
                 </label>
-                <input value={userArray} onChange={handleUserArray}/>
+                <input type="text" value={userArray} onChange={handleUserArray}/>
             </div>
             <button onClick={renderVisualization}>Käivita</button>
         </div>
